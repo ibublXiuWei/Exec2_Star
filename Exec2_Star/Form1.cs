@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,7 +96,8 @@ namespace Exec2_Star
 			for (int i = 1; i <= rows; i++)
 			{
 				int space = rows - i;
-				result += new string(' ', space) + new string('*', i) + "\r\n";
+				//result += new string(' ', space) + new string('*', i) + "\r\n";
+				result += new string('*', i).PadLeft(rows)+ "\r\n";
 			}
 			return result;
 		}
@@ -104,8 +106,9 @@ namespace Exec2_Star
 			string result = string.Empty;
 			for (int i = 1; i <= rows; i++)
 			{
-				int space = rows - i;
-				result += new string(' ', space) + new string('*', 2 * i - 1) + "\r\n";
+				int space = rows -i;
+				result += new string(' ',space) + new string('*', 2 * i - 1) + "\r\n";
+				//.PadLeft 
 			}
 			return result;
 		}
