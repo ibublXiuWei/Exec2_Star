@@ -96,8 +96,7 @@ namespace Exec2_Star
 			for (int i = 1; i <= rows; i++)
 			{
 				int space = rows - i;
-				//result += new string(' ', space) + new string('*', i) + "\r\n";
-				result += new string('*', i).PadLeft(rows)+ "\r\n";
+				result += new string(' ', 2*space) + new string('*', i) + "\r\n";
 			}
 			return result;
 		}
@@ -107,7 +106,7 @@ namespace Exec2_Star
 			for (int i = 1; i <= rows; i++)
 			{
 				int space = rows -i;
-				result += new string(' ',space) + new string('*', 2 * i - 1) + "\r\n";
+				result += new string(' ',2*space) + new string('*', 2 * i - 1) + "\r\n";
 				//.PadLeft 
 			}
 			return result;
